@@ -1,0 +1,87 @@
+{% extends 'core/base.html' %}
+{% csrf_token %}
+{% block title %}Aptitude Test{% endblock title %}
+{% load static %}
+
+{% block head_content %}
+{% endblock head_content %}
+
+
+{% block main_content %}
+{% if percentage >= 50 %}
+<div class="container">
+    <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading">Congratulations!</h4>
+        <p>You have being successfully cleared the Online Assement Round!</p>
+        <hr>
+    </div>
+</div>
+
+
+{% else %}
+<div class="container">
+    <div class="alert alert-warning" role="alert">
+        <h4 class="alert-heading">Sorry!</h4>
+        <p>We regret to inform that you have not been cleared the assesment round</p>
+        <hr>
+    </div>
+</div>
+{% endif %}
+
+
+
+
+<!-- <h2>Results</h2>
+
+<table class="table table-bordered">
+    <thead>
+        {% comment %} <th>#</th> {% endcomment %}
+        <th>Question</th>
+        <th>Right Answer</th>
+        <th>Submitted Answer</th>
+    </tr>
+</thead>
+<tbody>
+    {% for row in result %}
+    <tr>
+        {% comment %} <td>{{row.id}}</td> {% endcomment %}
+        <td>{{row.question}}</td>
+        <td>{{row.question.right_opt}}</td>
+        {% if row.question.right_opt == row.right_answer %}
+        <td class="bg-success text-white">{{row.right_answer}}</td>
+        {% else %}
+        <td class="bg-danger text-white">{{row.right_answer}}</td>
+        {% endif %}
+    </tr>
+    {% endfor %}
+</tbody>
+</table>
+
+
+<h2>Result Details </h2>
+<table class="table table-bordered">
+
+<tr>
+    <th>Total Questions</th>
+    <td>{{result.count}}</td>
+</tr>
+<tr>
+    <th>Total Skipped Questions</th>
+    <td>{{total_skipped}}</td>
+</tr>
+<tr>
+    <th>Total Attempted Questions</th>
+    <td>{{attempted}}</td>    
+</tr>
+<tr>
+    <th>Right Answers</th>
+    <td>{{rightAns}}</td>    
+</tr>
+<tr>
+    <th>Percentage</th>
+    <td>{{percentage}}</td>    
+</tr>
+
+</table> -->
+
+{% endblock main_content %}

@@ -1,0 +1,47 @@
+CV
+
+
+
+Personal Information:
+
+Name
+
+Pratik Sabale
+
+Age
+
+21
+
+Mobile
+
+9112118658
+
+
+
+Address
+
+Sabalewadi
+
+
+
+Technical skills:
+
+Python, Java, c
+
+
+
+Work History:
+
+Python Developer in heroku, sudoko in c .
+
+
+
+Certifications:
+
+Python trainee, web development in python, full stack java, complete c .
+
+
+
+Projects:
+
+analysis in python, logIn system in Python, game in java, gui java

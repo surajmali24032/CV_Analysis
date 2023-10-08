@@ -1,0 +1,47 @@
+CV
+
+
+
+Personal Information:
+
+Name
+
+Suraj Mali
+
+Age
+
+22
+
+Mobile
+
+9764383464
+
+
+
+Address
+
+At post umbraj
+
+
+
+Technical skills:
+
+Java, c
+
+
+
+Work History:
+
+Full stack java, internship in java
+
+
+
+Certifications:
+
+Core java , enterprise java
+
+
+
+Projects:
+
+Billing system in java

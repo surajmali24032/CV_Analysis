@@ -1,0 +1,81 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Home{% endblock title %}
+
+{% block main_content %}
+{% load static %}
+
+
+{% for message in messages %}
+<div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+    {{message}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+</div>
+{% endfor %}
+
+
+<div class="how-section">
+    <div class="row">
+        <div class="col-12 main-row">
+            <div class="col-12 col-md-4 rounded">
+                <img style="width: 100%;border-radius: 1rem;" src="{% static 'core/images/home_first_img.jpg' %}"
+                    alt="mainImage" srcset="">
+                    
+            </div>
+            <div class="col-12 col-md-8 big-heading">
+                <h1 class="">Need a Job!</h1>
+                <p>Are you afraid that your lack of professional experience will hinder you from getting your target
+                    job? How can you make a resume that doesn’t only respond well to the job requirements but also gets
+                    through the applicant tracking system or ATS and right into the recruiter’s hands? Worry no more!
+                    Today, entry-level applicants like you can make sure their resumes will pass the screening process.
+                    Thanks to resume analysis software! You just have to know how exactly resume robots work to your
+                    advantage.</p>
+
+                <button type="button" class="btn btn-primary btn-lg download-button"> <a
+                        style="text-decoration: none;color: white;" href="register">Register</a> </button>
+                <button type="button" class="btn btn-primary btn-lg download-button"><a
+                        style="text-decoration: none;color: white;" href="login">Login</a></button>
+
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+<div class="how-section1">
+    <div class="row">
+
+        <div class="col-12 main-row">
+
+            <div class="col-12 col-md-4">
+                <div class="col-12">
+                    <br>
+                    <br>
+                    <h4>Why Cv Analysis</h4>
+                        <ul>
+                            <li>
+                            <p class="text-muted">Helps you optimize your resume....</p>
+                        </li>
+                            <li>
+                                <p class="text-muted">Offers semantic matches....</p>
+                            </li>
+                            <li>
+                                <p class="text-muted">Boosts your chances of getting job interviews....</p>
+                            </li>
+                            <li>
+                                <p class="text-muted">Include keywords relative to the job position....</p>
+                            </li>
+                        </ul>
+                </div>
+            </div>
+            <div class="col-12 col-md-8 rounded">
+                <img style="border-radius: 1rem;" height="400px" width="800px"  src="{% static 'core/images/analyser_banner.jpg' %}" alt="mainImage"
+                    srcset="">
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock main_content %}

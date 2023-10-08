@@ -1,0 +1,74 @@
+{% extends 'core/base.html' %}
+
+{% block title %}LogIn{% endblock title %}
+
+{% block main_content %}
+{% load static %}
+
+{% for message in messages %}
+<div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+    <strong>Congrats!</strong> {{message}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+</div>
+{% endfor %}
+
+<div class="container-fluid">
+    <div class="row" style="margin-right: 0;margin-left: 0;">
+        <div class="col-12 col-md-7 mb-3">
+            <img style="margin-top: 1rem;width: 100%;" src="{% static 'core/images/login_img2.png' %}" alt="Healthcare"
+                srcset="">
+
+        </div>
+        <div class="col-12 col-md-5">
+
+            <form class="login-form" action="login" method="POST">
+                {% csrf_token %}
+                <div class="form-group col-12">
+                    <h3 class="col-12"><strong style="color: #0067d5;">Login</strong></h3>
+                    <hr>
+                </div>
+
+
+                 <div class="form-group col-12">
+                    <div class="input-group col-lg-12 mb-4">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                <i class="fa fa-user text-muted"></i>
+                            </span>
+                        </div>
+                        <input type="text" name="username" class="form-control" placeholder="Username" id="username"
+                            required="">
+                    </div>
+                </div> 
+
+
+
+                <div class="form-group col-12">
+                    <div class="input-group col-lg-12 mb-4">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                <i class="fa fa-lock text-muted"></i>
+                            </span>
+                        </div>
+                        <input type="password" name="password" class="form-control" placeholder="Enter Password"
+                            id="password" required="">
+                    </div>
+                </div>
+                <div class="form-group col-12">
+                    <div class="input-group col-lg-12 mb-4">
+                        <button style="width: 100%;" class=" btn btn-primary" type="submit">
+                            Login
+                        </button>
+                    </div>
+                </div>
+                <footer class="blockquote-footer pl-4 pb-4">
+                    Don't have an account? <a href="register" class="text-primary ml-2">Register</a><br>
+                </footer>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock main_content %}

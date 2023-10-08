@@ -1,0 +1,29 @@
+{% extends 'core/base.html' %}
+{% csrf_token %}
+{% block title %}{% endblock title %}
+
+{% block main_content %}
+<!-- {% load static %} -->
+
+
+<div class="container text-center" style="padding: 150px;">
+        
+            <p class="h1"> Start Aptitude Test</p>
+            <br> 
+        <a href="apti"><button type="submit" class="btn btn-primary">Start Aptitude</button></a>
+        <br>
+        <br>
+        <ul>
+            <li>The Question Level is Easy-Moderate</li>
+            <li>Each Question has 60 Seconds</li>
+            <li>Result will declared after test</li>
+        </ul>
+    </div>
+    
+
+
+
+
+
+
+{% endblock main_content %}
